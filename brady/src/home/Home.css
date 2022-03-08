@@ -137,8 +137,11 @@ p3 {
     font-weight: 400;
 }
 
-
-
+ul {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
 
 @media only screen and (max-width: 1243px) {
     .boxes {

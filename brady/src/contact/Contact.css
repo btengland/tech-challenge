@@ -1,9 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 .contact-header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 20px;
+}
+
+.contact-container {
+    display: flex;
+}
+
+.home-con {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     padding-right: 20px;
+    margin-bottom: -1px;
+    width: 50vw;
+    height: 80px;
+    box-sizing: border-box;
+    background-color: white;
 }
 
 .homebtn {
@@ -22,9 +39,17 @@
 
 .heading-one-contact {
     display: flex;
-    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
     height: 100vh;
-    background-color: green;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+
+.heading-words-contact {
+    display: flex;
 }
 
 .underline-two {
@@ -33,3 +58,118 @@
     margin-top: 33px;
 }
 
+.p3-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    width: 480px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.heading-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 80px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    background-color: #F5F5F5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: bold;
+    width: 280px;
+    height: 50px;
+    border: none;
+    margin-bottom: 18px;
+    padding-left: 10px;
+}
+
+.message {
+    width: 588px;
+    height: 150px;
+    background-color: #F5F5F5;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: bold;
+    border: none;
+    margin-bottom: 18px;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.heading-two-contact {
+    margin-bottom: 55px;
+}
+
+.submitbtn {
+    border: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    height: 45px;
+    width: 130px;
+    background-color: #DEBF79;
+    font-weight: 400;
+    color: white;
+}
+
+.submitbtn-container {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+@media only screen and (max-width: 1394px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-con {
+        background-color: #222222;
+        width: auto;
+    }
+
+    .heading-one-contact {
+        width: 100vw;
+    }
+
+    .heading-two {
+        width: 100vw;
+        align-items: center;
+    }
+
+    .inputs {
+        flex-direction: column;
+    }
+
+    .form-container {
+        align-items: center;
+    }
+
+    .message {
+        width: 280px;
+    }
+  }
