@@ -1,4 +1,8 @@
 {
   "name": "mwi-tech-challenge",
-  "version": "1.0.1"
+  "version": "1.0.1",
+  "dependencies": {
+    "axios-react": "^2.0.8",
+    "react-router-dom": "^6.2.2"
+  }
 }

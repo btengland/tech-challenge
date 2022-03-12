@@ -1,9 +1,37 @@
 import "./Contact.css";
-import React from "react";
 import logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import React, { useState } from "react";
 
 function Contact() {
+  const [title, setTitle] = useState(null);
+  const [paragraph, setParagraph] = useState(null);
+
+  const addTitle = async (title) => {
+    const response = await axios.post("/api/title/", {
+      title,
+    });
+    setTitle(response.data);
+  };
+
+  const getTitle = async () => {
+    const response = await axios.get("/api/title/");
+    setTitle(response.data);
+  };
+
+  const addParagraph = async (paragraph) => {
+    const response = await axios.post("/api/paragraph/", {
+      paragraph,
+    });
+    setParagraph(response.data);
+  };
+
+  const getParagraph = async () => {
+    const response = await axios.get("/api/paragraph/");
+    setParagraph(response.data);
+  };
+
   return (
     <div className="Contact">
       <div className="contact-header-container">
@@ -42,17 +70,36 @@ function Contact() {
               <input placeholder="Last Name" type="text"></input>
             </div>
             <div className="inputs">
-              <input placeholder="Title" type="text"></input>
+              <input
+                value={title}
+                onChange={(e) => {
+                  setTitle({ saturday: e.target.value });
+                }}
+                placeholder="Title"
+                type="text"
+              ></input>
               <input placeholder="Email" type="text"></input>
             </div>
             <textarea
+              value={paragraph}
+              onChange={(e) => {
+                setParagraph({ saturday: e.target.value });
+              }}
               className="message"
               placeholder="Message"
               type="text"
             ></textarea>
           </div>
           <div className="submitbtn-container">
-            <button className="submitbtn">Submit</button>
+            <button
+              onClick={() => {
+                addParagraph(paragraph);
+                addTitle(title);
+              }}
+              className="submitbtn"
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>
